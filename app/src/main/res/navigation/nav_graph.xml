@@ -37,7 +37,11 @@
         android:id="@+id/foodFragment"
         android:name="com.example.restaurant.view.food.FoodFragment"
         android:label="fragment_food"
-        tools:layout="@layout/fragment_food" />
+        tools:layout="@layout/fragment_food" >
+        <action
+            android:id="@+id/action_foodFragment_to_foodDetailFragment"
+            app:destination="@id/foodDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.restaurant.view.fastFood.DetailFragment"
@@ -48,4 +52,8 @@
         android:name="com.example.restaurant.view.dessertFragment.DetailDessertFragment"
         android:label="fragment_detail_dessert"
         tools:layout="@layout/fragment_detail_dessert" />
+    <fragment
+        android:id="@+id/foodDetailFragment"
+        android:name="com.example.restaurant.view.food.FoodDetailFragment"
+        android:label="FoodDetailFragment" />
 </navigation>

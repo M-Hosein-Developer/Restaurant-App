@@ -86,6 +86,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="foodDetailFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="339" />
+                            <option name="y" value="408" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="foodFragment">
                     <value>
                       <LayoutPositions>
@@ -94,6 +106,15 @@
                             <option name="x" value="-177" />
                             <option name="y" value="414" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_foodFragment_to_foodDetailFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

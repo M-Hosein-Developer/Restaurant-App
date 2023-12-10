@@ -76,7 +76,7 @@ class Repository @Inject constructor(private val apiService: ApiService) {
     }
 
     suspend fun updateFood(foodClass: FoodClass){
-        apiService.updateFastFood(foodClass.id , foodToJsonObject(foodClass))
+        apiService.updateFood(foodClass.id , foodToJsonObject(foodClass))
     }
 
     suspend fun deleteFood(id : Int){

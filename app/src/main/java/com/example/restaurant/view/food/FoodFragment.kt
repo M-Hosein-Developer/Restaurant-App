@@ -9,6 +9,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import com.example.restaurant.R
 import com.example.restaurant.databinding.DialogAddNewItemFoodBinding
 import com.example.restaurant.databinding.FragmentFoodBinding
 import com.example.restaurant.model.dataClasses.FoodClass
@@ -124,6 +126,17 @@ class FoodFragment : Fragment() , FoodAdapter.ItemEventFood {
     }
 
     override fun onItemClick(foodClass: FoodClass, position: Int) {
+
+        val bundle = Bundle()
+        bundle.putInt("id", foodClass.id)
+        bundle.putString("name", foodClass.name)
+        bundle.putString("price", foodClass.price)
+        bundle.putString("desc", foodClass.description)
+        bundle.putString("timeFood", foodClass.time)
+        bundle.putString("imgUrl", foodClass.imageUrl)
+
+        findNavController().navigate(R.id.action_foodFragment_to_foodDetailFragment, bundle)
+
 
     }
 
