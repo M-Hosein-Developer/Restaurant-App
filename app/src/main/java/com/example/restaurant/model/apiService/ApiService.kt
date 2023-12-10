@@ -1,6 +1,7 @@
 package com.example.restaurant.model.apiService
 
 import com.example.restaurant.model.dataClasses.DessertClass
+import com.example.restaurant.model.dataClasses.DrinkClass
 import com.example.restaurant.model.dataClasses.FastFoodClass
 import com.example.restaurant.model.dataClasses.FoodClass
 import com.example.restaurant.model.dataClasses.OrderClass
@@ -65,5 +66,19 @@ interface ApiService {
 
     @DELETE("Food/deleting{id}")
     suspend fun deleteFood(@Path("id") id : Int)
+
+
+    //Drink
+    @GET("getDrinks")
+    suspend fun getAllDrink() : List<DrinkClass>
+
+    @POST("insertDrinks")
+    suspend fun insertDrink(@Body body: JsonObject)
+
+    @PUT("drinks/update{id}")
+    suspend fun updateDrink(@Path("id") id : Int , @Body body: JsonObject)
+
+    @DELETE("drinks/deleting{id}")
+    suspend fun deleteDrink(@Path("id") id : Int)
 
 }

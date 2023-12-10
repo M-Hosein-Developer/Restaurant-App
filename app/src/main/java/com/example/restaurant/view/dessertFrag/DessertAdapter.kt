@@ -1,4 +1,4 @@
-package com.example.restaurant.view.dessertFragment
+package com.example.restaurant.view.dessertFrag
 
 import android.view.LayoutInflater
 import android.view.View

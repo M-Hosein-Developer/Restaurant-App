@@ -2,10 +2,12 @@ package com.example.restaurant.model
 
 import com.example.restaurant.model.apiService.ApiService
 import com.example.restaurant.model.dataClasses.DessertClass
+import com.example.restaurant.model.dataClasses.DrinkClass
 import com.example.restaurant.model.dataClasses.FastFoodClass
 import com.example.restaurant.model.dataClasses.FoodClass
 import com.example.restaurant.model.dataClasses.OrderClass
 import dessertToJsonObject
+import drinkToJsonObject
 import fastFoodToJsonObject
 import foodToJsonObject
 import kotlinx.coroutines.CoroutineScope
@@ -81,5 +83,22 @@ class Repository @Inject constructor(private val apiService: ApiService) {
 
     suspend fun deleteFood(id : Int){
         apiService.deleteFood(id)
+    }
+
+    //Drink
+    suspend fun getAllDrink() : List<DrinkClass>{
+        return apiService.getAllDrink()
+    }
+
+    suspend fun insertDrink(drinkClass: DrinkClass){
+        apiService.insertDrink(drinkToJsonObject(drinkClass))
+    }
+
+    suspend fun updateDrink(drinkClass: DrinkClass){
+        apiService.updateDrink(drinkClass.id , drinkToJsonObject(drinkClass))
+    }
+
+    suspend fun deleteDrink(id: Int){
+        apiService.deleteDrink(id)
     }
 }

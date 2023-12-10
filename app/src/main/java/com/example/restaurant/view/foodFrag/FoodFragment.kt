@@ -1,4 +1,4 @@
-package com.example.restaurant.view.food
+package com.example.restaurant.view.foodFrag
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,6 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.restaurant.R
 import com.example.restaurant.databinding.DialogAddNewItemFoodBinding
+import com.example.restaurant.databinding.DialogDeleteItemBinding
 import com.example.restaurant.databinding.FragmentFoodBinding
 import com.example.restaurant.model.dataClasses.FoodClass
 import com.example.restaurant.viewModel.FoodViewModel
@@ -141,6 +142,34 @@ class FoodFragment : Fragment() , FoodAdapter.ItemEventFood {
     }
 
     override fun onItemLongClick(foodClass: FoodClass, position: Int){
+
+        val dialog = AlertDialog.Builder(requireActivity()).create()
+        val dialogBinding = DialogDeleteItemBinding.inflate(layoutInflater)
+        dialog.setView(dialogBinding.root)
+        dialog.setCancelable(true)
+        dialog.show()
+
+
+        dialogBinding.txtDelete.text = "آیا از حذف ${foodClass.name} مطمئن هستید؟"
+
+        dialogBinding.btnDoneDelete.setOnClickListener {
+
+            lifecycleScope.launch {
+
+                viewModel.deleteFood(foodClass.id)
+                setDataToRecyclerView()
+
+            }
+
+            dialog.dismiss()
+
+        }
+
+        dialogBinding.btnCancelDelete.setOnClickListener {
+            dialog.dismiss()
+        }
+
+
 
     }
 

@@ -1,4 +1,4 @@
-package com.example.restaurant.view.dessertFragment
+package com.example.restaurant.view.dessertFrag
 
 import android.annotation.SuppressLint
 import android.os.Bundle

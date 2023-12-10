@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_order" />
     <fragment
         android:id="@+id/dessertsFragment"
-        android:name="com.example.restaurant.view.dessertFragment.DessertsFragment"
+        android:name="com.example.restaurant.view.dessertFrag.DessertsFragment"
         android:label="fragment_desserts"
         tools:layout="@layout/fragment_desserts" >
         <action
@@ -21,9 +21,13 @@
     </fragment>
     <fragment
         android:id="@+id/drinksFragment"
-        android:name="com.example.restaurant.view.DrinksFragment"
+        android:name="com.example.restaurant.view.drinkFrag.DrinksFragment"
         android:label="fragment_drinks"
-        tools:layout="@layout/fragment_drinks" />
+        tools:layout="@layout/fragment_drinks" >
+        <action
+            android:id="@+id/action_drinksFragment_to_detailDrinkFragment"
+            app:destination="@id/detailDrinkFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fastFoodFragment"
         android:name="com.example.restaurant.view.fastFood.FastFoodFragment"
@@ -35,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/foodFragment"
-        android:name="com.example.restaurant.view.food.FoodFragment"
+        android:name="com.example.restaurant.view.foodFrag.FoodFragment"
         android:label="fragment_food"
         tools:layout="@layout/fragment_food" >
         <action
@@ -49,11 +53,15 @@
         tools:layout="@layout/fragment_detail"/>
     <fragment
         android:id="@+id/detailDessertFragment"
-        android:name="com.example.restaurant.view.dessertFragment.DetailDessertFragment"
+        android:name="com.example.restaurant.view.dessertFrag.DetailDessertFragment"
         android:label="fragment_detail_dessert"
         tools:layout="@layout/fragment_detail_dessert" />
     <fragment
         android:id="@+id/foodDetailFragment"
-        android:name="com.example.restaurant.view.food.FoodDetailFragment"
+        android:name="com.example.restaurant.view.foodFrag.FoodDetailFragment"
         android:label="FoodDetailFragment" />
+    <fragment
+        android:id="@+id/detailDrinkFragment"
+        android:name="com.example.restaurant.view.drinkFrag.DetailDrinkFragment"
+        android:label="DetailDrinkFragment" />
 </navigation>

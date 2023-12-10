@@ -1,4 +1,5 @@
 import com.example.restaurant.model.dataClasses.DessertClass
+import com.example.restaurant.model.dataClasses.DrinkClass
 import com.example.restaurant.model.dataClasses.FastFoodClass
 import com.example.restaurant.model.dataClasses.FoodClass
 import com.google.gson.JsonObject
@@ -28,6 +29,18 @@ fun dessertToJsonObject(dessertClass: DessertClass) : JsonObject {
     jsonObject.addProperty("price" , dessertClass.price)
     jsonObject.addProperty("description" , dessertClass.description)
     jsonObject.addProperty("imageUrl" , dessertClass.imageUrl)
+
+    return jsonObject
+}
+
+fun drinkToJsonObject(drinkClass: DrinkClass) : JsonObject {
+
+    val jsonObject = JsonObject()
+    jsonObject.addProperty("id" , drinkClass.id)
+    jsonObject.addProperty("name" , drinkClass.name)
+    jsonObject.addProperty("price" , drinkClass.price)
+    jsonObject.addProperty("description" , drinkClass.description)
+    jsonObject.addProperty("imageUrl" , drinkClass.imageUrl)
 
     return jsonObject
 }
