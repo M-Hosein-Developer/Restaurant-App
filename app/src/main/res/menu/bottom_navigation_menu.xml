@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/dessertsFragment"
+        android:title="دسر"
+        android:icon="@drawable/dessert"/>
+
+    <item android:id="@+id/fastFoodFragment"
+        android:title="فست فود"
+        android:icon="@drawable/fastfood"/>
+
+    <item android:id="@+id/orderFragment"
+        android:title="سفارشات"
+        android:icon="@drawable/order"/>
+
+    <item android:id="@+id/foodFragment"
+        android:title="غذای روزانه"
+        android:icon="@drawable/food"/>
+
+    <item android:id="@+id/drinksFragment"
+        android:title="نوشیدنی"
+        android:icon="@drawable/drink"/>
+
+
+</menu>
