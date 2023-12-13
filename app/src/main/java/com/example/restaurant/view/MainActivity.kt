@@ -3,6 +3,7 @@ package com.example.restaurant.view
 
 import android.graphics.Color
 import android.os.Bundle
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.fragment.NavHostFragment
@@ -44,10 +45,21 @@ class MainActivity : AppCompatActivity() {
         val navView: BottomNavigationView = binding.bottomNavigationView
         navView.setupWithNavController(navController)
 
-
         binding.bottomNavigationView.selectedItemId = R.id.orderFragment
         binding.toolbar.title = "رستوران"
         binding.toolbar.setTitleTextColor(Color.WHITE)
+
+
+        val actionBarDrawerToggle = ActionBarDrawerToggle(
+            this ,
+            binding.drawerLayout ,
+            binding.toolbar ,
+            R.string.openDrawer ,
+            R.string.closeDrawer
+        )
+
+        binding.drawerLayout.addDrawerListener(actionBarDrawerToggle)
+        actionBarDrawerToggle.syncState()
 
 
     }

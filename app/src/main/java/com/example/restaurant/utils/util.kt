@@ -4,7 +4,7 @@ import com.example.restaurant.model.dataClasses.FastFoodClass
 import com.example.restaurant.model.dataClasses.FoodClass
 import com.google.gson.JsonObject
 
-const val BASE_URL = "http://yourSystemIp:8080/"
+const val BASE_URL = "http://192.168.198.62:8080/"
 
 
 fun fastFoodToJsonObject(fastFoodClass: FastFoodClass) : JsonObject {
